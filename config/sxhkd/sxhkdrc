@@ -125,11 +125,11 @@ XFMonBrightness{up,down}
 	brightnessctl set 355{+,-}
 
 # printscreen
-@Print
-	screenshot
+Print
+        scrot -e 'mv $f ~/pictures/screenshots/'
 
-Shift + @Print
-	screenshot select
+shift + Print
+        scrot --select -e 'mv $f ~/pictures/screenshots/'
 
-control + @Print
-	screenshot window
+ctrl + Print
+        scrot --focused --border -e 'mv $f ~/pictures/screenshots/'
